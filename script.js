@@ -1,21 +1,48 @@
 const container = document.querySelector(".container");
 
-for (let i = 0; i < 12; i++) {
-    const rowContainer = document.createElement("div");
-    rowContainer.className = "row-container";
-    for (let j = 0; j < 12; j++) {
-        const boxContainer = document.createElement("div");
-        boxContainer.className = "box-container";
-        rowContainer.append(boxContainer);
+// Create '*' x '*' number of boxes in etch a sketch
+function createBoxes(num) {
+    for (let i = 0; i < num; i++) {
+        const rowContainer = document.createElement("div");
+        rowContainer.className = "row-container";
+        for (let j = 0; j < num; j++) {
+            const boxContainer = document.createElement("div");
+            boxContainer.className = "box-container";
+            rowContainer.append(boxContainer);
+        };
+        container.append(rowContainer);
     };
-    container.append(rowContainer);
-};
 
-const boxContainer = document.querySelectorAll(".box-container");
+    const boxContainer = document.querySelectorAll(".box-container");
 
-for (let box of boxContainer) {
-    console.log(box)
-    box.addEventListener("mouseover", () => {
-        box.style.backgroundColor = "blue";
-    })
+    // Create event listener for each box, and change
+    // background color to blue if mouse is over
+    for (let box of boxContainer) {
+        console.log(box)
+        box.addEventListener("mouseover", () => {
+            box.style.backgroundColor = "blue";
+        })
+    }
 }
+
+createBoxes(10);
+
+const textBar = document.querySelector(".text-bar");
+const submitButton = document.querySelector(".submit-button");
+
+submitButton.addEventListener("click", () => {
+    let value = Number(textBar.value);
+
+    if (typeof value === 'number') {
+        value = Number(value)
+
+        if (value > 100) {
+            alert("Must provide a number less than 100!");
+        } else if (value <= 0) {
+            alert("Must provide a number greater than 0!")
+        } else {
+            document.querySelector(".container").innerHTML = "";
+            createBoxes(value);
+        }
+    }
+})
