@@ -1,0 +1,17 @@
+.container {
+    border: medium solid black;
+    height: 500px;
+    width: 500px;
+    display: flex;
+}
+
+.row-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.box-container {
+    border: medium solid black;
+    flex: 1;
+}
