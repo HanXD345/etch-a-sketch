@@ -33,13 +33,15 @@ const submitButton = document.querySelector(".submit-button");
 submitButton.addEventListener("click", () => {
     let value = Number(textBar.value);
 
-    if (typeof value === 'number') {
+    if (isNaN(value)) {
+        alert("Please provide a valid number between 1 and 100!")
+    } else {
         value = Number(value)
 
         if (value > 100) {
             alert("Must provide a number less than 100!");
         } else if (value <= 0) {
-            alert("Must provide a number greater than 0!")
+            alert("Must provide a number greater than 0!");
         } else {
             document.querySelector(".container").innerHTML = "";
             createBoxes(value);
