@@ -25,11 +25,14 @@ function createBoxes(num) {
     }
 }
 
+// Create a 10 x 10 grid as a starting point
 createBoxes(10);
 
 const textBar = document.querySelector(".text-bar");
 const submitButton = document.querySelector(".submit-button");
 
+// If user submits a valid number between 1 and 100, 
+// creates a new grid with that size
 submitButton.addEventListener("click", () => {
     let value = Number(textBar.value);
 
