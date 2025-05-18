@@ -15,8 +15,8 @@ h1 {
 
 .container {
     border: medium solid black;
-    height: 500px;
-    width: 500px;
+    height: 750px;
+    width: 750px;
     display: flex;
 }
 
