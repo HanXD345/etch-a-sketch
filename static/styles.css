@@ -1,3 +1,18 @@
+h1 {
+    text-align: center;
+}
+
+.input-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.etch-a-sketch-container {
+    display: flex;
+    justify-content: center;
+}
+
 .container {
     border: medium solid black;
     height: 500px;
