@@ -11,10 +11,10 @@ h1 {
 .etch-a-sketch-container {
     display: flex;
     justify-content: center;
-    background-color: black;
 }
 
 .container {
+    background-color: black;
     border: medium solid black;
     height: 750px;
     width: 750px;
