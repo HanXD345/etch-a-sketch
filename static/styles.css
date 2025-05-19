@@ -11,6 +11,7 @@ h1 {
 .etch-a-sketch-container {
     display: flex;
     justify-content: center;
+    background-color: black;
 }
 
 .container {
@@ -27,6 +28,6 @@ h1 {
 }
 
 .box-container {
-    border: medium solid black;
+    border: 1px solid white;
     flex: 1;
 }
