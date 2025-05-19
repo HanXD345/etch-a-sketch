@@ -20,7 +20,13 @@ function createBoxes(num) {
     for (let box of boxContainer) {
         console.log(box)
         box.addEventListener("mouseover", () => {
-            box.style.backgroundColor = "blue";
+            const random_red = Math.floor(Math.random() * 256);
+            const random_green = Math.floor(Math.random() * 256);
+            const random_blue = Math.floor(Math.random() * 256);
+            console.log(box.style.backgroundColor)
+            if (box.style.backgroundColor === "") {
+                box.style.backgroundColor = `rgb(${random_red}, ${random_green}, ${random_blue})`;
+            };
         })
     }
 }
