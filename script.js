@@ -23,10 +23,17 @@ function createBoxes(num) {
             const random_red = Math.floor(Math.random() * 256);
             const random_green = Math.floor(Math.random() * 256);
             const random_blue = Math.floor(Math.random() * 256);
-            console.log(box.style.backgroundColor)
             if (box.style.backgroundColor === "") {
                 box.style.backgroundColor = `rgb(${random_red}, ${random_green}, ${random_blue})`;
-            };
+            } else {
+                const currentOpacity = box.style.opacity;
+                console.log(currentOpacity)
+                if (currentOpacity === "") {
+                    box.style.opacity = `0.9`;
+                } else {
+                    box.style.opacity = `${currentOpacity - 0.1}`
+                }
+            }
         })
     }
 }
